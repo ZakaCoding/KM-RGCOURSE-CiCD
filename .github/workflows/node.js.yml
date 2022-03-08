@@ -32,3 +32,10 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
     - run: npm test
+
+    - name: Deploy
+      uses: Jameslves/github-deploy-action@v4.2.5
+      with:
+        branch: gh-pages # Optional branch, in this case branch for github pages
+        folder: build # action folder for build website
+
